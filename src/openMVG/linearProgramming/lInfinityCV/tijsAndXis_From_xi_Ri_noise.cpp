@@ -9,6 +9,7 @@
 #include "openMVG/linearProgramming/lInfinityCV/tijsAndXis_From_xi_Ri_noise.hpp"
 
 #include <limits>
+#include <cassert>
 
 //--
 //- Implementation of algorithm from Paper titled :

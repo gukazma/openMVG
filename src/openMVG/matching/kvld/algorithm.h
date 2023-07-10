@@ -11,6 +11,7 @@
 
 #include <algorithm>
 #include <cmath>
+#include <cassert>
 #include <fstream>
 #include "openMVG/image/image_container.hpp"
 #include "openMVG/types.hpp"

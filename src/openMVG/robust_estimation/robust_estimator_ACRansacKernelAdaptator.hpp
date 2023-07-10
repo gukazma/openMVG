@@ -27,6 +27,7 @@
 //
 
 #include <vector>
+#include <cassert>
 
 #include "openMVG/multiview/conditioning.hpp"
 #include "openMVG/multiview/essential.hpp"

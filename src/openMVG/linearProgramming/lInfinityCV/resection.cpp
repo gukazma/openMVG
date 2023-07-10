@@ -9,6 +9,7 @@
 #include "openMVG/linearProgramming/lInfinityCV/resection.hpp"
 
 #include <limits>
+#include <cassert>
 
 //--
 //- Implementation of algorithm from Paper titled :

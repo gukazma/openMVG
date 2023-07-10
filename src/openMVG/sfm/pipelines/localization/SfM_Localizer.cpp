@@ -24,6 +24,7 @@
 
 #include <memory>
 #include <utility>
+#include <cassert>
 
 namespace openMVG
 {

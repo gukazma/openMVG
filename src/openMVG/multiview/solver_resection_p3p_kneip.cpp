@@ -13,6 +13,7 @@
 #include "openMVG/numeric/poly.h"
 
 #include <cmath>
+#include <cassert>
 
 namespace openMVG {
 namespace euclidean_resection {

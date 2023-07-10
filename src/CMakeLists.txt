@@ -74,14 +74,16 @@ endforeach()
 set(OPENMVG_VERSION ${OPENMVG_VERSION_MAJOR}.${OPENMVG_VERSION_MINOR}.${OPENMVG_VERSION_REVISION})
 
 # Default build is in Release mode
-if (NOT CMAKE_BUILD_TYPE AND NOT MSVC)
-  set(CMAKE_BUILD_TYPE "Release")
-endif (NOT CMAKE_BUILD_TYPE AND NOT MSVC)
+# if (NOT CMAKE_BUILD_TYPE AND NOT MSVC)
+#   set(CMAKE_BUILD_TYPE "Release")
+# endif (NOT CMAKE_BUILD_TYPE AND NOT MSVC)
 
 # Set build path
 set(EXECUTABLE_OUTPUT_PATH "${PROJECT_BINARY_DIR}/${CMAKE_SYSTEM_NAME}-${CMAKE_SYSTEM_PROCESSOR}-${CMAKE_BUILD_TYPE}")
 set(LIBRARY_OUTPUT_PATH "${PROJECT_BINARY_DIR}/${CMAKE_SYSTEM_NAME}-${CMAKE_SYSTEM_PROCESSOR}-${CMAKE_BUILD_TYPE}")
 set(CMAKE_MODULE_PATH "D:/ThirdParty/cmake" ${CMAKE_MODULE_PATH})
+set(CMAKE_DEBUG_POSTFIX "d")
+set(CMAKE_RELEASE_POSTFIX "") 
 # ==============================================================================
 # Macro used to forward compiler preprocessors to OpenMVGConfig.cmake targets
 # ==============================================================================

@@ -10,7 +10,7 @@
 #define OPENMVG_FEATURES_BINARY_REGIONS_HPP
 
 #include <typeinfo>
-
+#include <cassert>
 #include "openMVG/features/descriptor.hpp"
 #include "openMVG/features/regions.hpp"
 #include "openMVG/features/regions_scale_sort.hpp"

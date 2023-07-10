@@ -32,6 +32,7 @@
 
 #include <cmath>
 #include <fstream>
+#include <cassert>
 
 namespace openMVG {
 

@@ -11,6 +11,7 @@
 
 #include <unsupported/Eigen/NonLinearOptimization>
 #include <unsupported/Eigen/NumericalDiff>
+#include <cassert>
 
 namespace openMVG{
 namespace geometry{

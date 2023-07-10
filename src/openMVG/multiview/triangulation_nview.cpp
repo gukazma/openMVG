@@ -11,6 +11,7 @@
 #include "openMVG/numeric/nullspace.hpp"
 
 #include <limits>
+#include <cassert>
 
 namespace openMVG {
 

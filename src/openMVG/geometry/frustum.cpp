@@ -11,6 +11,7 @@
 
 #include <fstream>
 #include <iomanip>
+#include <cassert>
 
 namespace openMVG{
 namespace geometry{
