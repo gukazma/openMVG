@@ -233,6 +233,7 @@ target_link_libraries(openMVG_main_ChangeLocalOrigin
     openMVG_features
     openMVG_sfm
     ${STLPLUS_LIBRARY}
+    Eigen3::Eigen
 )
 
 # Installation rules

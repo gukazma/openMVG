@@ -26,6 +26,10 @@ target_include_directories(openMVG_numeric
     $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}>
     $<INSTALL_INTERFACE:include>
 )
+target_link_libraries(openMVG_numeric
+PUBLIC
+Eigen3::Eigen
+)
 if (DEFINED OpenMVG_USE_INTERNAL_EIGEN)
   target_include_directories(openMVG_numeric PUBLIC
     $<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/include/openMVG/third_party/eigen/>)

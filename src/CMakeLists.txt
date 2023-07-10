@@ -81,7 +81,7 @@ endif (NOT CMAKE_BUILD_TYPE AND NOT MSVC)
 # Set build path
 set(EXECUTABLE_OUTPUT_PATH "${PROJECT_BINARY_DIR}/${CMAKE_SYSTEM_NAME}-${CMAKE_SYSTEM_PROCESSOR}-${CMAKE_BUILD_TYPE}")
 set(LIBRARY_OUTPUT_PATH "${PROJECT_BINARY_DIR}/${CMAKE_SYSTEM_NAME}-${CMAKE_SYSTEM_PROCESSOR}-${CMAKE_BUILD_TYPE}")
-
+set(CMAKE_MODULE_PATH "D:/ThirdParty/cmake" ${CMAKE_MODULE_PATH})
 # ==============================================================================
 # Macro used to forward compiler preprocessors to OpenMVGConfig.cmake targets
 # ==============================================================================
@@ -257,7 +257,7 @@ ENDMACRO(UNIT_TEST)
 # - internal if cereal not found
 # - as of cereal:1.3.1 target requires component
 # ==============================================================================
-find_package(cereal QUIET CONFIG)
+find_package(cereal REQUIRED CONFIG HINTS D:/ThirdParty/cereal)
 if (NOT cereal_FOUND)
   add_library(cereal INTERFACE)
   target_include_directories(cereal
@@ -281,7 +281,7 @@ endif()
 # - external if EIGEN_INCLUDE_DIR_HINTS is defined
 # - internal if Eigen not found
 # ==============================================================================
-find_package(Eigen3 QUIET)
+find_package(Eigen3 REQUIRED HINTS D:/ThirdParty/Eigen3)
 if (NOT Eigen3_FOUND)
   set(EIGEN_INCLUDE_DIR_HINTS ${CMAKE_CURRENT_SOURCE_DIR}/third_party/eigen)
   set(OpenMVG_USE_INTERNAL_EIGEN ON)
@@ -297,7 +297,7 @@ add_definitions(-DEIGEN_MPL2_ONLY)
 # - external by default if CERES_DIR_HINTS or find_package found a valid Ceres
 # - internal if ceres not found (ceres-solver+cxsparse+miniglog)
 # ==============================================================================
-find_package(Ceres QUIET HINTS ${CERES_DIR_HINTS})
+find_package(Ceres REQUIRED HINTS D:/ThirdParty/Ceres)
 if (NOT Ceres_FOUND)
   set(OpenMVG_USE_INTERNAL_CERES ON)
   set(CERES_INCLUDE_DIRS
